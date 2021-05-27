@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta property="og:url" content="/"/>
+	<meta property="og:description" content="BATTLEGROUNDS MOBILE INDIA"/>
+	<meta property="og:title" content="BATTLEGROUNDS MOBILE INDIA"/>
+	<meta name="description" content="BATTLEGROUNDS MOBILE INDIA">
+	<link rel="shortcut icon" href="favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>The Nityam 100</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I am a Student web designer & front‑end developer focused on crafting clean & user‑friendly experiences. Code and Chatbot Never Lies" />
+  <meta name="keywords" content="Chatbot and code" />
+  <meta name="author" content="Nityam" />
+<style type="text/css">
+
+/*--------
+Variables
+-------------*/
+:root{
+    --main-color: #e98b2c;
+    --dark: #1b1b22;
+    --dark-light: #32323a;
+    --white: #ffffff;
+    --white-light: #c8c8c8;
+}
+
+/*----------
+global styles
+-------------*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    overscroll-behavior: smooth;
+}
+::before,
+::after{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'calibri', sans-serif;
+    font-weight: 300;
+    color: var(--white);
+    background-color: var(--dark);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+}
+body.hide-scrolling{
+    overflow-y: hidden;
+}
+*{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--white);
+}
+h3,h4,h5,h6{
+    font-size: 20px;   
+}
+h1,h2{
+    font-size: 48px;
+}
+p{
+    font-size: 18px;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    width: 100%;
+}
+.min-vh-100{
+    min-height: 100vh;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.hidden{
+    display: none!important;
+}
+.sec-padding{
+    padding: 100px 0;
+}
+a{
+    color: var(--white);
+}
+/*buttons*/
+button{
+    font-family: inherit;
+    font-weight: inherit;
+}
+.btn{
+    background-color: var(--dark-light);
+    padding: 9px 25px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--white);
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--white);
+    transform: translate(4px,4px);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+@media(min-width:992px){
+    .btn:hover::before{
+        transform: translate(0px,0px);
+    }
+}
+.close-btn{
+    height: 40px;
+    width: 40px;
+    background-color: var(--dark);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.close-btn::before,
+.close-btn::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    background-color: var(--white-light);
+    transition: 0.3 ease;
+}
+.close-btn::before{
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.close-btn::after{
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.close-btn:hover::before,
+.close-btn:hover::after{
+    transform: translate(-50%,-50%);
+}
+/*Section Title*/
+.section-title{
+    padding: 0 15px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.section-title h2{
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+/*----------------
+custom scrollbar
+----------------*/
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--dark);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--dark);
+}
+
+/*bg animation effet*/
+.bg-animation-effect{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+.bg-animation-effect div{
+    height: 4px;
+    width: 4px;
+    background-color: var(--main-color);
+    margin-left: calc((100% - 40px) / 11);
+}
+
+
+/*portfolio section*/
+.portfolio-section{
+    padding-bottom: 70px;
+}
+.portfolio-filter{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.portfolio-filter-btn{
+    padding: 4px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--dark-light);
+    color: var(--white-light);
+    text-transform: capitalize ;
+    margin: 4px 10px;
+    display: inline-block;
+}
+.portfolio-filter-btn.active{
+    background-color: var(--main-color);
+    color: var(--white);
+    cursor: auto;
+}
+.filter-status{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark-light);
+    z-index: 201;
+}
+.portfolio-item{
+    width: calc((100% / 3) - 30px);
+    margin: 0 15px 30px;
+    cursor: pointer;
+    display: none;
+}
+.portfolio-item{
+    display: block;
+}
+.portfolio-item-thumbnail{
+    position: relative;
+}
+.portfolio-item-thumbnail::before,
+.portfolio-item-thumbnail::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: var(--dark-light);
+    opacity: 0.8;
+    transition: height 0.3s ease;
+}
+.portfolio-item-thumbnail::before{
+    top: 0;
+}
+.portfolio-item-thumbnail::after{
+    bottom: 0;
+}
+.portfolio-item:hover .portfolio-item-thumbnail::before,
+.portfolio-item:hover .portfolio-item-thumbnail::after{
+    height: 50%;
+}
+.portfolio-item-thumbnail .btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%) scale(0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.portfolio-item:hover .portfolio-item-thumbnail .btn{
+    transition-delay: 0.2s;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+.portfolio-item img{
+    width: 100%;
+}
+.portfolio-item h3{
+    font-size: 20px;
+    margin: 10px 0 5px;
+    text-transform: capitalize;
+}
+.portfolio-item-details{
+    display: none;
+}
+
+
+
+/*--Responsive--*/
+@media(max-width:991px){
+.portfolio-item{
+    width: calc(50% - 30px);
+}
+h1,h2{
+    font-size: 40px;
+}
+h6{
+    font-size: 90px;
+}
+}
+@media(max-width:767px){
+    .portfolio-item{
+        width: calc(100% - 30px);
+    } 
+    h1,h2{
+        font-size: 30px;
+    }
+
+}
+@media(max-width:572px){
+    
+}
+
+
+/*---------The End congratulations Nityam----------------*/
+</style>
+</head>
+<body>
+<!--portfolio section starts-->
+<section class="portfolio-section sec-padding ">
+    <div class="container">
+      <div class="row">
+        <div class="section-title">
+          <h2>The Nityam 100</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="portfolio-filter">
+        </div>
+      </div>
+      <div class="row portfolio-items">
+   <audio controls>
+  <source src="1st aniversarry.mp3" type="audio/mp3">
+</audio>
+<audio controls>
+    <source src="2nd aniversarry.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="Ancient Seceret.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="Christmas Theam.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="Halloween.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="mad miramaar.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="Metro Royal.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="Pubg theam original.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="Runic Power Theam song.mp3" type="audio/mp3">
+  </audio>
+  <audio controls>
+    <source src="Season 4.mp3" type="audio/mp3">
+  </audio>
+      </div>
+    </div>
+  </section>
+<!--portfolio section ends-->
+</body>
+</html>
