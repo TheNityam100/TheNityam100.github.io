@@ -1,0 +1,497 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta property="og:url" content="/"/>
+	<meta property="og:description" content="BATTLEGROUNDS MOBILE INDIA"/>
+	<meta property="og:title" content="BATTLEGROUNDS MOBILE INDIA"/>
+	<meta name="description" content="BATTLEGROUNDS MOBILE INDIA">
+	<link rel="shortcut icon" href="favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>The Nityam 100</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I am a Student web designer & front‑end developer focused on crafting clean & user‑friendly experiences. Code and Chatbot Never Lies" />
+  <meta name="keywords" content="Chatbot and code" />
+  <meta name="author" content="Nityam" />
+<style type="text/css">
+
+/*--------
+Variables
+-------------*/
+:root{
+    --main-color: #e98b2c;
+    --dark: #1b1b22;
+    --dark-light: #32323a;
+    --white: #ffffff;
+    --white-light: #c8c8c8;
+}
+
+/*----------
+global styles
+-------------*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    overscroll-behavior: smooth;
+}
+::before,
+::after{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'calibri', sans-serif;
+    font-weight: 300;
+    color: var(--white);
+    background-color: var(--dark);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+}
+body.hide-scrolling{
+    overflow-y: hidden;
+}
+*{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--white);
+}
+h3,h4,h5,h6{
+    font-size: 20px;   
+}
+h1,h2{
+    font-size: 48px;
+}
+p{
+    font-size: 18px;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    width: 100%;
+}
+.min-vh-100{
+    min-height: 100vh;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.hidden{
+    display: none!important;
+}
+.sec-padding{
+    padding: 100px 0;
+}
+a{
+    color: var(--white);
+}
+/*buttons*/
+button{
+    font-family: inherit;
+    font-weight: inherit;
+}
+.btn{
+    background-color: var(--dark-light);
+    padding: 9px 25px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--white);
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--white);
+    transform: translate(4px,4px);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+@media(min-width:992px){
+    .btn:hover::before{
+        transform: translate(0px,0px);
+    }
+}
+.close-btn{
+    height: 40px;
+    width: 40px;
+    background-color: var(--dark);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.close-btn::before,
+.close-btn::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    background-color: var(--white-light);
+    transition: 0.3 ease;
+}
+.close-btn::before{
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.close-btn::after{
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.close-btn:hover::before,
+.close-btn:hover::after{
+    transform: translate(-50%,-50%);
+}
+/*Section Title*/
+.section-title{
+    padding: 0 15px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.section-title h2{
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+/*----------------
+custom scrollbar
+----------------*/
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--dark);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--dark);
+}
+
+/*bg animation effet*/
+.bg-animation-effect{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+.bg-animation-effect div{
+    height: 4px;
+    width: 4px;
+    background-color: var(--main-color);
+    margin-left: calc((100% - 40px) / 11);
+}
+
+
+/*portfolio section*/
+.portfolio-section{
+    padding-bottom: 70px;
+}
+.portfolio-filter{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.portfolio-filter-btn{
+    padding: 4px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--dark-light);
+    color: var(--white-light);
+    text-transform: capitalize ;
+    margin: 4px 10px;
+    display: inline-block;
+}
+.portfolio-filter-btn.active{
+    background-color: var(--main-color);
+    color: var(--white);
+    cursor: auto;
+}
+.filter-status{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark-light);
+    z-index: 201;
+}
+.portfolio-item{
+    width: calc((100% / 3) - 30px);
+    margin: 0 15px 30px;
+    cursor: pointer;
+    display: none;
+}
+.portfolio-item{
+    display: block;
+}
+.portfolio-item-thumbnail{
+    position: relative;
+}
+.portfolio-item-thumbnail::before,
+.portfolio-item-thumbnail::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: var(--dark-light);
+    opacity: 0.8;
+    transition: height 0.3s ease;
+}
+.portfolio-item-thumbnail::before{
+    top: 0;
+}
+.portfolio-item-thumbnail::after{
+    bottom: 0;
+}
+.portfolio-item:hover .portfolio-item-thumbnail::before,
+.portfolio-item:hover .portfolio-item-thumbnail::after{
+    height: 50%;
+}
+.portfolio-item-thumbnail .btn{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%) scale(0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.portfolio-item:hover .portfolio-item-thumbnail .btn{
+    transition-delay: 0.2s;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+.portfolio-item img{
+    width: 100%;
+}
+.portfolio-item h3{
+    font-size: 20px;
+    margin: 10px 0 5px;
+    text-transform: capitalize;
+}
+.portfolio-item-details{
+    display: none;
+}
+
+
+
+/*--Responsive--*/
+@media(max-width:991px){
+.portfolio-item{
+    width: calc(50% - 30px);
+}
+h1,h2{
+    font-size: 40px;
+}
+h6{
+    font-size: 90px;
+}
+}
+@media(max-width:767px){
+    .portfolio-item{
+        width: calc(100% - 30px);
+    } 
+    h1,h2{
+        font-size: 30px;
+    }
+
+}
+@media(max-width:572px){
+    
+}
+
+
+
+/*portfolio popup*/
+.portfolio-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+   
+}
+.portfolio-popup .open{
+    visibility: visible;
+}
+.portfolio-popup::before,
+.portfolio-popup::after{
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 100%;   
+    background-color: var(--dark-light);
+    z-index: -1;
+}
+.portfolio-popup::before{
+    top: 0;
+    left: 0;
+}
+.portfolio-popup::after{
+    right: 0;
+    bottom: 0;
+}
+.pp-inner{
+    height: 100vh;
+    padding: 0 15px;
+    overflow-y: auto;
+}
+.pp-content{
+    max-width: 850px;
+    margin: 50px auto 60px;
+}
+.pp-header{
+    position: relative;
+}
+.pp-header h2{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    padding-right: 50px;
+}
+.pp-header h2 span{
+    font-weight: 300;
+}
+.pp-close-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.pp-header h3{
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.pp-body{
+    padding: 15px 0;
+}
+.pp-body .description{
+    margin: 0 0 30px;
+}
+.pp-body .general-info p{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.pp-body .general-info p span{
+    font-weight: 300;
+    margin-left: 5px;
+}
+.pp-body .general-info p a{
+    color: var(--main-color);
+}
+.pp-thumbnail{
+    padding: 20px 0;
+}
+.pp-footer img{
+    max-width: 120px;
+}
+
+/*---------The End congratulations Nityam----------------*/
+</style>
+</head>
+<body>
+<!--portfolio item Details popup start-->
+<div class="portfolio-popup">
+    <div class="pp-inner">
+      <div class="pp-content">
+        <div class="pp-header">
+          <h1>
+           Privacy Policy Of Nityam
+          </h1>      
+        <div class="pp-body">
+          <div class="description">
+            <p>
+                <p>This Privacy Policy describes My policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.<br>
+                  I use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.<br></p>
+                  <p>
+                
+                    <h2>Collecting and Using Your Personal Data</h2><br>
+                    <h2>Types of Data Collected</h2><br>
+                    <h3>Personal Data<br></h3>
+                    While using Our Service, We will be asked to provide Me with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information will include:<br>
+                    
+                    Email address<br>
+                    
+                    First name and last name<br>
+                    
+                    Phone number<br>
+                    
+                    Social Media Profile Links<br>
+                    
+                    <h3>Use of Your Personal Data</h3><br>
+                    I will use your Personal Data for the following purposes:<br>
+                    
+                    To provide and maintain My Service, including to monitor the usage of our Service.<br>
+                    
+                    To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.<br>
+                    
+                    To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application’s push notifications regarding updates or informative communications related to the functionalities, or contracted services, including the security updates, when necessary or reasonable for their implementation.<br>
+                    
+                    To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.<br>
+                    
+                    To manage Your requests: To attend and manage Your requests to Us.<br>
+                    
+                    <h3>Security of Your Personal Data</h3><br>
+                    The security of Your Personal Data is important to Us. Data Provided by you are stored at Google Drive. I guarantee Your 100% safe and secure. I Never sell data provided you to any third part company.<br>
+                    
+                    <h3>Children’s Privacy</h3><br>
+                    My Service address anyone above the age of 12. But I do not knowingly collect personally identifiable information from anyone under the age of 15. If You are a parent or guardian and You are aware that Your child has provided Me with Personal Data, please contact Me. If I become aware that We have collected Personal Data from anyone under the age of 15 without verification of parental consent, I take steps to remove that information from My servers.<br>
+                    
+                    <h3>Links to Other Websites</h3><br>
+                    My Service may contain links to other websites that are operated by Me. If You click on a link, You will be directed to that another site. I strongly advise You to review the Privacy Policy of every site You visit.<br>
+                    
+                    <h3>Changes to this Privacy Policy</h3><br>
+                    I will let You know via email and/or a prominent notice on My Service, prior to the change becoming effective and update the “Last updated” date at the top of this Privacy Policy.<br>
+                    
+                    You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.<br>
+                    
+                    <h3>Contact Us</h3><br>
+                    If you have any questions about this Privacy Policy, You can contact us:<br>
+                    
+                    By email: TheNityam100@gmail.com<br>
+                    
+                    By visiting our facebook / instagram page <br>
+                    
+                    Privacy Policy for The Nityam 100.<br>
+                
+            </p>
+          </div>
+       
+          <br>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--portfolio item Details popup ends-->
+    </body>
+    </html>
